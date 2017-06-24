@@ -1,3 +1,7 @@
+//imports
+
+$borderRadius: 5vw
+
 //colors
 $body: #1f243c
 $elements: #394264
@@ -9,3 +13,77 @@ $input: #50597b
 $header3: #1a4e95
 $body2: #3468af
 $accentYellow: #fcb150
+$text: #ffffff
+//end colors
+
+//mixins
+=header-text
+  font:
+    family: 'futura-pt'
+    weight: 600
+  color: $text
+
+=body-text
+  font:
+    family: 'futura-pt'
+    weight: 400
+    size: 6vw
+  color: $text
+//end mixins
+
+
+/*      styles      */
+
+//header sizes
+@for $i from 1 through 4
+  h#{$i}
+    font-size: 10vw / (1 + ($i / 10))
+
+//main styling
+body, html
+  height: 100%
+  margin: 0px
+  background-color: $body
+
+  body
+    margin: 5vw
+
+  .container
+    background-color: $elements
+    margin: auto
+    margin-top: 5vh
+    border-radius: $borderRadius
+    overflow: hidden
+    padding-bottom: $borderRadius
+
+    .header
+      width: 100%
+      background-color: $header
+      height: 15vw
+      display: flex
+      justify-content: center
+      align-items: center
+
+    h1
+      margin: 0px
+      +header-text
+
+  li
+    +body-text
+    margin: 0px 5vw 0px 5vw
+
+  .btn
+    background-color: $accent
+    width: 100%
+    // border-radius: $borderRadius
+    font:
+      family: 'futura-pt'
+      weight: 500
+      size: 7vw
+    color: $text
+    margin: auto
+    border: none
+    &:active
+      background-color: $accent2
+    &:focus
+      outline: none
