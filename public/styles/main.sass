@@ -20,8 +20,12 @@ $linkText: rgb(171, 171, 171)
 //mixins
 
 //styles/////////////////
+html
+  overflow-y: hidden
+
 body
   margin: 0
+  // width: 100vw
 //search bar
 .searchBar
   position: fixed
@@ -56,9 +60,9 @@ body
   height: 10vh
 
 .container
-  margin: auto
+  // margin: auto
   text-align: center
-  
+
 
 .login
   height: 100%
@@ -67,7 +71,7 @@ body
   align-items: center
 
   .loginInput
-    width: 100%
+    width: 91%
     background-color: $inputBackground
     font:
       family: $appFamily
@@ -88,9 +92,9 @@ body
       size: 40pt
     color: $buttonText
     background-color: $button
-    margin: auto
+    // margin: auto
     margin-top: 2vw
-    margin-bottom: 65vw
+    margin-bottom: 2vw
     border: 0
     padding: 2vw 4vw
     &:focus
