@@ -15,20 +15,33 @@
   </script>
   <!-- stylesheets -->
   <link rel="stylesheet" href="/styles/main.min.css">
-  <!-- javascript -->
+  <!-- vendors -->
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+  <script src="vendors/jquery.min.js" charset="utf-8"></script>
+  <script src="vendors/jspdf.min.js" charset="utf-8"></script>
+  <!-- Scripts -->
+  <!--
+  app config
+  -->
+  <script src="scripts/captureApp.js" charset="utf-8"></script>
+  <!-- controllers -->
+  <script src="scripts/controllers/searchController.js" charset="utf-8"></script>
+  <script src="scripts/controllers/AuthController.js" charset="utf-8"></script>
+  <!-- servvices -->
+  <script src="scripts/services/goService.js" charset="utf-8"></script>
+  <script src="scripts/services/watsonService.js" charset="utf-8"></script>
 </head>
 
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>HEADER</h1>
-    </div>
-    <ul>
-      <li>Content 1</li>
-      <li>content 2</li>
-    </ul>
-    <button class="btn" type="button">SUBMIT</button>
+<body ng-app="myApp">
+  <div class="searchBar" id="searchBar">
+    <input type="text" class="searchInput" placeholder="Search">
+    <!-- <button type="button" class="searchButton" name="button">SEARCH</button> -->
   </div>
+  <div class="offsetSearchBar" id="offsetSearchBar">
+
+  </div>
+  <ng-view></ng-view>
 </body>
 
 </html>

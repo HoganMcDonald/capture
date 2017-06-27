@@ -1,89 +1,104 @@
-//imports
+//fonts
+// 'futura-pt'
+// 'raleway'
 
-$borderRadius: 5vw
+$appFamily: 'futura-pt'
 
 //colors
-$body: #1f243c
-$elements: #394264
-$accent: #d94a64
-$accent2: #e64c65
-$header: #11a8ab
-$header2: #35aadc
-$input: #50597b
-$header3: #1a4e95
-$body2: #3468af
-$accentYellow: #fcb150
-$text: #ffffff
-//end colors
+$searchBar: rgb(0, 0, 0)
+$searchBarActive: rgb(194, 194, 194)
+
+$inputText: rgb(154, 154, 154)
+$inputBackground: rgb(224, 224, 224)
+
+$button: rgb(0, 0, 0)
+$buttonActive: rgb(56, 56, 56)
+$buttonText: rgb(255, 255, 255)
+
+$linkText: rgb(171, 171, 171)
 
 //mixins
-=header-text
-  font:
-    family: 'futura-pt'
-    weight: 600
-  color: $text
 
-=body-text
-  font:
-    family: 'futura-pt'
-    weight: 400
-    size: 6vw
-  color: $text
-//end mixins
+//styles/////////////////
+body
+  margin: 0
+//search bar
+.searchBar
+  position: fixed
+  top: 0
+  width: 100%
+  height: 10vh
+  background-color: $searchBar
+  display: flex
+  justify-content: center
+  align-items: center
 
-
-/*      styles      */
-
-//header sizes
-@for $i from 1 through 4
-  h#{$i}
-    font-size: 10vw / (1 + ($i / 10))
-
-//main styling
-body, html
-  height: 100%
-  margin: 0px
-  background-color: $body
-
-  body
-    margin: 5vw
-
-  .container
-    background-color: $elements
-    margin: auto
-    margin-top: 5vh
-    border-radius: $borderRadius
-    overflow: hidden
-    padding-bottom: $borderRadius
-
-    .header
-      width: 100%
-      background-color: $header
-      height: 15vw
-      display: flex
-      justify-content: center
-      align-items: center
-
-    h1
-      margin: 0px
-      +header-text
-
-  li
-    +body-text
-    margin: 0px 5vw 0px 5vw
-
-  .btn
-    background-color: $accent
-    width: 100%
-    // border-radius: $borderRadius
+  .searchInput
     font:
-      family: 'futura-pt'
-      weight: 500
-      size: 7vw
-    color: $text
-    margin: auto
-    border: none
-    &:active
-      background-color: $accent2
+      family: $appFamily
+      size: 40pt
+    padding-left: 5vw
+    height: 100%
+    width: 100%
+    border: 0
+    background-color: rgba(0, 0, 0, 0)
+    text-align: center
+    &:focus
+      background-color: $searchBarActive
+      outline: none
+    transition-duration: 200ms
+    text-align: left
+
+
+
+.offsetSearchBar
+  width: 100%
+  height: 10vh
+
+.container
+  margin: auto
+  text-align: center
+  width: 100%
+
+.login
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .loginInput
+    width: 100%
+    background-color: $inputBackground
+    font:
+      family: $appFamily
+      size: 60pt
+    text-align: center
+    border: 0
+    margin: 0
     &:focus
       outline: none
+
+  .usernameLogin
+    margin-top: 50vw
+    margin-bottom: 2vw
+
+  .loginButton
+    font:
+      famiy: $appFamily
+      size: 40pt
+    color: $buttonText
+    background-color: $button
+    margin-top: 2vw
+    margin-bottom: 65vw
+    border: 0
+    padding: 2vw 4vw
+    &:focus
+      outline: none
+    &:active
+      background-color: $buttonActive
+
+  .registerLink
+    font:
+      family: $appFamily
+      size: 40pt
+    color: $linkText
