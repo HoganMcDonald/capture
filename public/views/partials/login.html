@@ -1,9 +1,9 @@
-<div class="login">
+<div class="login" ng-controller="AuthController as ac">
   <div class="container">
-    <input type="text" class="usernameLogin loginInput" placeholder="Username"><br>
-    <input type="password" class="passwordLogin loginInput" placeholder="Password"><br>
+    <input type="text" class="usernameLogin loginInput" placeholder="Username" ng-model="ac.username"><br>
+    <input type="password" class="passwordLogin loginInput" placeholder="Password" ng-model="ac.password"><br>
     <div class="container">
-      <button type="button" class="loginButton">LOGIN</button><br>
+      <button type="button" class="loginButton" ng-click="ac.loginUser()">LOGIN</button><br>
       <a href="/#!/register" class="registerLink">Register</a>
     </div>
 
