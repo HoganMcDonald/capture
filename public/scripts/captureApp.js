@@ -7,5 +7,7 @@ app.config(function($routeProvider) {
   }).when('/register', {
     templateUrl: 'views/partials/register.html',
     controller: 'AuthController'
+  }).when('/capture', {
+    templateUrl: 'views/partials/capture.html'
   });
 });

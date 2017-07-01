@@ -17,6 +17,9 @@ $buttonText: rgb(255, 255, 255)
 
 $linkText: rgb(171, 171, 171)
 
+$captureButton: rgb(84, 200, 197)
+$captureButtonActive: rgb(41, 131, 129)
+
 //mixins
 
 //styles/////////////////
@@ -121,3 +124,28 @@ body
   display: flex
   justify-content: center
   align-items: center
+
+.capture
+  height: 78vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .imageButton
+    height: 20vw
+    width: 40vw
+    align-items: center
+    font:
+      family: $appFamily
+      size: 40pt
+    background-color: $captureButton
+    border: none
+    &:focus
+      outline: none
+    &:active
+      background-color: $captureButtonActive
+
+    .cameraIcon
+      height: 40%
+      width: auto
+      margin: 2vw
